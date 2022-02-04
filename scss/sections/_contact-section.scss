@@ -1,0 +1,126 @@
+// include related files
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/animations" as *;
+
+.contact {
+  text-transform: capitalize;
+  background: #f48a831a;
+
+  .row {
+    box-shadow: -2px 0rem 1rem rgb(0 0 0 / 15%) !important;
+  }
+
+  .contact-content {
+    @include gradient;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      color: $white;
+      font-weight: bold;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    h4 {
+      color: $white;
+    }
+
+    ul {
+      font-weight: 200;
+      color: $white;
+      list-style: none;
+
+      li {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          left: -25px;
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 5rem 1rem;
+    }
+  }
+
+  .contact-form {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 5rem;
+    @include media-breakpoint-down(lg) {
+      margin: 20px 0;
+      padding: 0px 2rem;
+    }
+
+    h3 {
+      @include gradient;
+      font-size: 2rem;
+      font-weight: bold;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2rem;
+      @include media-breakpoint-down(lg) {
+        background: none;
+        -webkit-text-fill-color: $title-color;
+        text-align: center !important;
+      }
+    }
+
+    form {
+      .name {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 15px;
+        justify-content: space-between;
+
+        input {
+          width: 48%;
+        }
+      }
+
+      input {
+        border: 1px solid #c7c7c7;
+        outline: none;
+        box-shadow: -2px 0rem 1rem rgb(0 0 0 / 15%) !important;
+        border-radius: 4px;
+        padding: 5px 10px;
+      }
+
+      input[type="email"] {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      textarea {
+        width: 100%;
+        resize: none;
+        margin-bottom: 15px;
+        border: 1px solid #c7c7c7;
+        outline: none;
+        box-shadow: -2px 0rem 1rem rgb(0 0 0 / 15%) !important;
+        border-radius: 4px;
+        padding: 5px 10px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-radius: 40px;
+        background: #f48a83;
+        color: white;
+      }
+    }
+  }
+}

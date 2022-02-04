@@ -1,0 +1,13 @@
+// include related files
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/animations" as *;
+
+footer {
+  text-transform: capitalize;
+  @include gradient;
+
+  p {
+    margin: 20px;
+  }
+}

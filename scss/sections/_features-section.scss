@@ -1,0 +1,94 @@
+// include related files
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/animations" as *;
+
+.features {
+  .feature-1 {
+    background-color: $title-color;
+    height: 100vh;
+    padding: 40vh 50px;
+    text-transform: capitalize;
+    text-align: center;
+
+    h3 {
+      color: $main-color;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $alt-color;
+      letter-spacing: 2px;
+    }
+
+    @include media-breakpoint-between(sm, lg) {
+      padding: 40vh 11px;
+    }
+  }
+
+  .feature-2 {
+    background-color: $main-color;
+    height: 100vh;
+    padding: 40vh 50px;
+    text-transform: capitalize;
+    text-align: center;
+
+    h3 {
+      color: $alt-color;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $title-color;
+      letter-spacing: 2px;
+    }
+
+    @include media-breakpoint-between(sm, lg) {
+      padding: 40vh 11px;
+    }
+  }
+
+  .feature-3 {
+    background-color: $alt-color;
+    height: 100vh;
+    padding: 40vh 50px;
+    text-transform: capitalize;
+    text-align: center;
+
+    h3 {
+      color: $main-color;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $title-color;
+      letter-spacing: 2px;
+    }
+
+    @include media-breakpoint-between(sm, lg) {
+      padding: 40vh 11px;
+    }
+  }
+
+  .feature-4 {
+    background-color: $title-color;
+    height: 100vh;
+    padding: 40vh 50px;
+    text-transform: capitalize;
+    text-align: center;
+
+    h3 {
+      color: $alt-color;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $main-color;
+      letter-spacing: 2px;
+    }
+
+    @include media-breakpoint-between(sm, lg) {
+      padding: 40vh 11px;
+    }
+  }
+}

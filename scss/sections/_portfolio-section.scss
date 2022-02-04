@@ -1,0 +1,51 @@
+// include related files
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/animations" as *;
+
+.portfolio {
+  div.slide {
+    text-align: center;
+
+    img {
+      width: 45%;
+    }
+  }
+
+  .fp-controlArrow {
+    @include media-breakpoint-up(lg) {
+      bottom: 30px;
+      top: auto;
+    }
+    @include media-breakpoint-down(lg) {
+      bottom: 45px;
+    }
+  }
+
+  .fp-controlArrow.fp-prev {
+    border-width: 20.5px 20px 20.5px 0;
+    @include media-breakpoint-up(lg) {
+      left: 46% !important;
+      border-color: transparent $title-color transparent transparent;
+    }
+    @include media-breakpoint-down(lg) {
+      border-color: transparent $title-color transparent transparent;
+    }
+  }
+
+  .fp-controlArrow.fp-next {
+    border-width: 20.5px 0 20.5px 20px;
+    @include media-breakpoint-up(lg) {
+      right: 46% !important;
+      border-color: transparent transparent transparent $title-color;
+    }
+    @include media-breakpoint-down(lg) {
+      border-color: transparent transparent transparent $title-color;
+    }
+  }
+
+  #fp-nav ul,
+  .fp-slidesNav ul {
+    display: none;
+  }
+}

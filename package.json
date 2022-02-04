@@ -1,0 +1,27 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "My personal Website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:css"
+  },
+  "keywords": [
+    "full-page-nav",
+    "sass",
+    "bootstrap",
+    "js",
+    "html"
+  ],
+  "author": "Marwan Elsayed",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.49.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "autoprefixer": "^10.4.2",
+    "bootstrap": "^5.1.3",
+    "postcss-cli": "^9.1.0"
+  }
+}
